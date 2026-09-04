@@ -1,0 +1,19 @@
+/* Animación y fotografía únicamente para “De la idea a la fachada”. */
+#proceso .process-showcase{display:flex!important;flex-direction:column;gap:22px;position:relative}
+#proceso .process-showcase:before{display:none!important}
+#proceso .process-row{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.28fr);align-items:stretch;gap:0;overflow:hidden;min-height:330px;border:1px solid rgba(220,228,242,.96);border-radius:28px;background:rgba(255,255,255,.97);box-shadow:0 18px 48px rgba(26,45,82,.11);isolation:isolate}
+#proceso .process-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,4vw,48px);position:relative;z-index:2;opacity:0;transform:translateX(-88px);transition:opacity .8s cubic-bezier(.2,.75,.2,1),transform .88s cubic-bezier(.2,.75,.2,1)}
+#proceso .process-media{margin:0;min-height:330px;overflow:hidden;position:relative;opacity:0;transform:translateX(88px);transition:opacity .8s .08s cubic-bezier(.2,.75,.2,1),transform .9s .08s cubic-bezier(.2,.75,.2,1)}
+#proceso .process-media:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(18,32,58,.09),transparent 35%)}
+#proceso .process-media img{width:100%;height:100%;min-height:330px;display:block;object-fit:cover;transform:scale(1.045);transition:transform 1.15s cubic-bezier(.2,.75,.2,1);filter:saturate(1.03) contrast(1.02)}
+#proceso .process-row:nth-child(even) .process-copy{order:2;transform:translateX(88px)}
+#proceso .process-row:nth-child(even) .process-media{order:1;transform:translateX(-88px)}
+#proceso .process-row:nth-child(even) .process-media:after{background:linear-gradient(270deg,rgba(18,32,58,.09),transparent 35%)}
+#proceso .process-row.process-visible .process-copy,#proceso .process-row.process-visible .process-media{opacity:1;transform:translateX(0)}
+#proceso .process-row.process-visible .process-media img{transform:scale(1)}
+#proceso .process-copy b{display:grid;place-items:center;width:48px;height:48px;margin:0 0 17px;border-radius:50%;color:#fff;background:linear-gradient(135deg,var(--b),#5b70b5 58%,var(--p));box-shadow:0 9px 22px rgba(42,72,137,.28),0 0 0 6px rgba(255,255,255,.92);font-size:1.05rem}
+#proceso .process-copy h3{margin:0 0 10px;font-size:clamp(1.42rem,2.4vw,2rem);line-height:1.1;color:var(--ink)}
+#proceso .process-copy p{margin:0;max-width:42ch;color:var(--mut);font-size:clamp(.96rem,1.4vw,1.08rem);line-height:1.66}
+@media(hover:hover){#proceso .process-row:hover{box-shadow:0 25px 62px rgba(26,45,82,.16)}#proceso .process-row:hover .process-media img{transform:scale(1.025)}}
+@media(max-width:760px){#proceso .process-row{grid-template-columns:1fr;min-height:0;border-radius:24px}#proceso .process-copy{order:1!important;padding:25px 22px 22px;transform:translateX(-58px)}#proceso .process-media{order:2!important;min-height:230px;transform:translateX(58px)}#proceso .process-row:nth-child(even) .process-copy{transform:translateX(58px)}#proceso .process-row:nth-child(even) .process-media{transform:translateX(-58px)}#proceso .process-row.process-visible .process-copy,#proceso .process-row.process-visible .process-media{transform:translateX(0)}#proceso .process-media img{min-height:230px;aspect-ratio:16/9}#proceso .process-media:after,#proceso .process-row:nth-child(even) .process-media:after{background:linear-gradient(0deg,rgba(18,32,58,.12),transparent 34%)}}
+@media(prefers-reduced-motion:reduce){#proceso .process-copy,#proceso .process-media,#proceso .process-media img{opacity:1!important;transform:none!important;transition:none!important}}

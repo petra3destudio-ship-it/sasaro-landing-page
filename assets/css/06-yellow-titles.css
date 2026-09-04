@@ -1,0 +1,28 @@
+/* Realce visual exclusivo de los títulos/etiquetas amarillas. */
+.head .tag{
+  padding:9px 15px;
+  font-size:clamp(.9rem,1.55vw,1.08rem);
+  line-height:1;
+  letter-spacing:.085em;
+  color:#493900;
+  background:linear-gradient(135deg,#fff7a8 0%,#ffe83f 45%,#ffd21f 100%);
+  border:1px solid rgba(255,214,20,.82);
+  box-shadow:0 0 14px rgba(255,232,63,.62),0 0 30px rgba(255,210,31,.30),0 9px 22px rgba(128,101,0,.16),inset 0 1px 0 rgba(255,255,255,.88);
+  text-shadow:0 1px 0 rgba(255,255,255,.72);
+  animation:sasaroYellowGlow 2.8s ease-in-out infinite;
+}
+.caption span{
+  padding:7px 12px;
+  font-size:clamp(.78rem,1.35vw,.94rem);
+  letter-spacing:.045em;
+  background:linear-gradient(135deg,#fff8a8,#ffe83f 46%,#ffd31d);
+  border:1px solid rgba(255,227,71,.78);
+  box-shadow:0 0 13px rgba(255,232,63,.58),0 0 26px rgba(255,216,47,.26),0 8px 20px rgba(0,0,0,.18);
+  text-shadow:0 1px 0 rgba(255,255,255,.68);
+}
+@keyframes sasaroYellowGlow{
+  0%,100%{filter:brightness(1);box-shadow:0 0 12px rgba(255,232,63,.52),0 0 26px rgba(255,210,31,.24),0 9px 22px rgba(128,101,0,.14),inset 0 1px 0 rgba(255,255,255,.88)}
+  50%{filter:brightness(1.08);box-shadow:0 0 20px rgba(255,239,96,.82),0 0 42px rgba(255,211,30,.42),0 11px 26px rgba(128,101,0,.18),inset 0 1px 0 rgba(255,255,255,.96)}
+}
+@media(max-width:680px){.head .tag{padding:8px 13px;font-size:.9rem}.caption span{font-size:.78rem}}
+@media(prefers-reduced-motion:reduce){.head .tag{animation:none!important}}
