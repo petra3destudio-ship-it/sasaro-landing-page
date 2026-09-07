@@ -26,3 +26,12 @@
 }
 @media(max-width:680px){.head .tag{padding:8px 13px;font-size:.9rem}.caption span{font-size:.78rem}}
 @media(prefers-reduced-motion:reduce){.head .tag{animation:none!important}}
+
+/* En móviles conservamos el acabado visual sin repintados ambientales continuos. */
+@media(max-width:760px){
+  .hero:before,.primary,.head .tag,.contact-action:after,.contact-icon.logo-icon,
+  .location-pin.logo-pin,.map-action,.map-action:before,.wa-float.logo-wa,.wa-float:before{
+    animation:none!important;
+  }
+  .btn,.svc,.svcphotos img{will-change:auto}
+}
